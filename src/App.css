@@ -1,38 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Silkscreen&display=swap');
+
 .App {
   text-align: center;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.functions{
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: url('https://j.gifs.com/G65MKL.gif');
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
+input {
+  padding: 10px 20px;
+  display: block;
+  margin: auto;
+  margin-top: -50px;
+  margin-bottom: 100px;
+  outline: none;
+  border: none;
+  background-color: rgba(144, 137, 137, 0.462);
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.434);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  width:20% ;
+  padding: 10px 0;
+  display: block;
+  margin: auto;
+  font-size: 17px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-image: url('https://i.pinimg.com/originals/01/62/f1/0162f15ff87e60ab45b027a1beef99b0.gif');
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+
+.timer {
+  background-size: cover;
+  width: 600px;
+  height: 280px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: monospace;
+  border: 1px solid rgba(255, 255, 255, 0.221);
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 60px;
+  letter-spacing: 4px;
+  font-size: 40px;
+  font-family: 'Silkscreen', cursive;
+}
+
+h4{
+  text-align: center;
+  margin-top: 120px;
+  font-size: 30px;
+  letter-spacing: 7px;
+  font-family: monospace;
 }
