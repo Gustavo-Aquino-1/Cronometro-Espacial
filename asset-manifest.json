@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Cronometro-Espacial/static/css/main.c6cceba9.css",
-    "main.js": "/Cronometro-Espacial/static/js/main.5a4bc6f5.js",
+    "main.js": "/Cronometro-Espacial/static/js/main.2b9f95a7.js",
     "static/media/audio.mp3": "/Cronometro-Espacial/static/media/audio.71fc76284928da607167.mp3",
     "index.html": "/Cronometro-Espacial/index.html",
     "main.c6cceba9.css.map": "/Cronometro-Espacial/static/css/main.c6cceba9.css.map",
-    "main.5a4bc6f5.js.map": "/Cronometro-Espacial/static/js/main.5a4bc6f5.js.map"
+    "main.2b9f95a7.js.map": "/Cronometro-Espacial/static/js/main.2b9f95a7.js.map"
   },
   "entrypoints": [
     "static/css/main.c6cceba9.css",
-    "static/js/main.5a4bc6f5.js"
+    "static/js/main.2b9f95a7.js"
   ]
 }
