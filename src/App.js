@@ -89,6 +89,7 @@
 
 //padStart => string.padStart(2,"0")
 
+
 import React, { Component } from "react";
 import './App.css'
 import contagem from './audio.mp3'
@@ -117,13 +118,16 @@ class App extends Component {
 
   timer = () => {
     this.setState({ click: true })
-    const { totalTime } = this.state;
-    if (totalTime > 0)
-      this.idTimer = setInterval(() => {
-        this.setState(({ totalTime }) => ({
-          totalTime: totalTime - 1
-        }))
-      }, 1000)
+    const { totalTime, pause } = this.state;
+    if(!this.idTimer || (this.idTimer && pause) ) {
+      if (totalTime > 0)
+        this.idTimer = setInterval(() => {
+          this.setState(({ totalTime }) => ({
+            totalTime: totalTime - 1,
+            pause: false,
+          }))
+        }, 1000)
+    }
   }
 
   componentDidUpdate() {
@@ -141,18 +145,18 @@ class App extends Component {
     }
   }
 
-  restart = () => {
-    const { input } = this.state;
-    clearInterval(this.idTimer)
-    if (typeof input === 'number') {
-      this.setState({
-        totalTime: input,
-        click: true,
-      }, () => {
-        this.timer() //para somente apos o valor ja estar setado , se nao daria erro
-      })
-    }
-  }
+  // restart = () => {
+  //   const { input } = this.state;
+  //   clearInterval(this.idTimer)
+  //   if (typeof input === 'number') {
+  //     this.setState({
+  //       totalTime: input,
+  //       click: true,
+  //     }, () => {
+  //       this.timer() //para somente apos o valor ja estar setado , se nao daria erro
+  //     })
+  //   }
+  // }
 
   clear = () => {
     const { pause } = this.state;
@@ -200,9 +204,9 @@ class App extends Component {
 
             <button onClick={this.limpaTudo}>Limpar</button>
 
-            <button 
+            {/* <button 
             // style={{color:'blue'}} //tem que passar um obj para a chave styles
-            onClick={this.restart}>Recomeçar</button>
+            onClick={this.restart}>Recomeçar</button> */}
           </div>
 
           </div>
